@@ -1,12 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
-  <body>
+  <body class="container">
+    <div class="bai_1">
+      <h1>Bài 1</h1>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          id="txt-luong"
+          class="form-control"
+          placeholder="Nhập lương một ngày"
+          aria-describedby="helpId"
+        />
+      </div>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          id="txt-so-ngay-lam"
+          class="form-control"
+          placeholder="Số ngày làm"
+          aria-describedby="helpId"
+        />
+      </div>
+
+      <button onclick="tinhLuong()" class="btn btn-danger">Tính lương</button>
+
+      <p class="text-primary" id="ket-qua-1"></p>
+    </div>
+
+    <div class="bai_2">
+      <h1>Bài 2</h1>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          id="txt-thu-1"
+          class="form-control"
+          placeholder="Nhập số thứ 1"
+          aria-describedby="helpId"
+        />
+      </div>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          id="txt-thu-2"
+          class="form-control"
+          placeholder="Nhập số thứ 2"
+          aria-describedby="helpId"
+        />
+      </div>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          id="txt-thu-3"
+          class="form-control"
+          placeholder="Nhập số thứ 3"
+          aria-describedby="helpId"
+        />
+      </div>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          id="txt-thu-4"
+          class="form-control"
+          placeholder="Nhập số thứ 4"
+          aria-describedby="helpId"
+        />
+      </div>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          id="txt-thu-5"
+          class="form-control"
+          placeholder="Nhập số thứ 5"
+          aria-describedby="helpId"
+        />
+      </div>
+      <button onclick="tinhTrungBinh()" class="btn btn-danger">
+        Tính trung bình
+      </button>
+      <p class="text-primary" id="ket-qua-2"></p>
+    </div>
+
+    <div class="bai_3">
+      <h1>Bài 3</h1>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          id="txt-so-tien-USD"
+          class="form-control"
+          placeholder="Nhập số tiền USD"
+          aria-describedby="helpId"
+        />
+      </div>
+      <button onclick="quyDoiTien()" class="btn btn-danger">
+        Quy đổi tiền
+      </button>
+
+      <p class="text-primary" id="ket-qua-3"></p>
+    </div>
+
+    <div class="bai_4">
+      <h1>Bài 4</h1>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          id="txt-chieu-dai"
+          class="form-control"
+          placeholder="Nhập chiều dài"
+          aria-describedby="helpId"
+        />
+      </div>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          id="txt-chieu-rong"
+          class="form-control"
+          placeholder="Nhập chiều rộng"
+          aria-describedby="helpId"
+        />
+      </div>
+      <button onclick="Tinh()" class="btn btn-danger">Tính</button>
+
+      <p class="text-primary" id="ket-qua-4"></p>
+    </div>
+
+    <div class="bai_5">
+      <h1>Bài 5</h1>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          id="txt-nhap-so"
+          class="form-control"
+          placeholder="Nhập số có 2 chữ số"
+          aria-describedby="helpId"
+        />
+      </div>
+
+      <button onclick="tinhTong()" class="btn btn-danger">Tính tổng</button>
+
+      <p class="text-primary" id="ket-qua-5"></p>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="./index.js"></script>
   </body>
 </html>

@@ -9,12 +9,21 @@ B3: công thức tính: tiền lương * số ngày
 Output: Kết quả (tiền)
 */
 
-// var soNgay = 3 ;
-// const tienLuong = 100.000 ;
+function tinhLuong(){
+    var luongMotNgayValue = document.getElementById
+    ("txt-luong").value*1;
+    console.log("luongMotNgayValue",luongMotNgayValue);
 
-// result = soNgay * tienLuong;
+    var soNgayLamValue = document.getElementById
+    ("txt-so-ngay-lam").value*1;
+    console.log("soNgayLamValue",soNgayLamValue);
 
-// console.log("result", result);
+    var ketQua1= luongMotNgayValue * soNgayLamValue;
+    console.log("ketQua1",ketQua1);
+
+    document.getElementById("ket-qua-1").innerHTML=
+    `<div>Tiền lương: ${ketQua1} </div>`
+}
 
 /* Bai 2
 Input: Tạo 5 biến số thực
@@ -27,15 +36,28 @@ B3: công thức tính: tổng 5 số thực / 5 số thực
 Output: Kết quả
 */
 
-// var soThuc1 = 1;
-// var soThuc2 = 2;
-// var soThuc3 = 3;
-// var soThuc4 = 4;
-// var soThuc5 = 5;
+function tinhTrungBinh(){
+    var soThu1Value = document.getElementById("txt-thu-1").value*1;
+    console.log("soThu1Value",soThu1Value);
 
-// result = (soThuc1 + soThuc2 + soThuc3 + soThuc4 + soThuc5) / 5;
+    var soThu2Value = document.getElementById("txt-thu-2").value*1;
+    console.log("soThu1Value",soThu1Value);
 
-// console.log("result",result);
+    var soThu3Value = document.getElementById("txt-thu-3").value*1;
+    console.log("soThu1Value",soThu1Value);
+
+    var soThu4Value = document.getElementById("txt-thu-4").value*1;
+    console.log("soThu1Value",soThu1Value);
+
+    var soThu5Value = document.getElementById("txt-thu-5").value*1;
+    console.log("soThu1Value",soThu1Value);
+
+    var ketQua2= (soThu1Value+soThu2Value+soThu3Value+soThu4Value+soThu5Value)/5;
+    console.log("ketQua2",ketQua2);
+
+    document.getElementById("ket-qua-2").innerHTML=
+    `<div>Giá trị trung bình: ${ketQua2}</div>`
+}
 
 /* Bai3
 Input: Tạo biến tiền quy đổi USA, tạo biến số tiền USA cần quy đổi
@@ -49,11 +71,19 @@ Output: Kết quả
 
 */
 
-// var tienQuyDoi = 23.500;
-// var sotienUSA = 2;
+function quyDoiTien(){
+    const giaHienTai = 23500;
+    console.log("giaHienTai", giaHienTai);
 
-// result = tienQuyDoi * sotienUSA;
-// console.log("result", result);
+    var soTienUSDValue = document.getElementById("txt-so-tien-USD").value*1;
+    console.log("soTienUSDValue",soTienUSDValue);
+
+    var ketQua3= giaHienTai*soTienUSDValue;
+    console.log("ketQua3",ketQua3);
+
+    document.getElementById("ket-qua-3").innerHTML=
+    `<div>Số tiền sau quy đổi: ${ketQua3}</div>`
+}
 
 /* Bai4
 Input : Tạo 2 biến chiều dài và chiều rộng
@@ -68,22 +98,50 @@ B3: công thức tính
 Output: Kết quả 
 */
 
-// var chieuDai = 3; 
-// var chieuRong = 5;
+function Tinh(){
+    var chieuDaiValue = document.getElementById("txt-chieu-dai").value*1;
+    console.log("chieuDaiValue",chieuDaiValue);
 
-// resultDienTich = chieuDai * chieuRong;
-// resultChuVi = (chieuDai + chieuRong) / 2; 
+    var chieuRongValue = document.getElementById("txt-chieu-rong").value*1;
+    console.log("chieuRongValue",chieuRongValue);
 
-// console.log(resultDienTich);
-// console.log(resultChuVi);
+    var ketQuaDienTich = chieuDaiValue*chieuRongValue;
+    console.log("ketQuaDienTich",ketQuaDienTich);
+    
+    var ketQuaChuVi = (chieuDaiValue+chieuRongValue)/2;
+    console.log("ketQuaChuVi",ketQuaChuVi);
+
+    document.getElementById("ket-qua-4").innerHTML=
+    `<div>Diện tích: ${ketQuaDienTich} ; Chu vi: ${ketQuaChuVi}</div>`
+}
 
 /* Bai5
-Input: 
+Input: Tạo biến nhập 1 số có 2 chữ số
+
+Các bước xử lý : 
+B1: Tạo biến là số có 2 chữ số
+B2: Lấy hàng đơn vị của số có 2 chữ số
+B3: Lấy hàng chục của số có 2 chữ số
+B4: Công thức tính : Hàng đơn vị + Hàng chục
+
+Output: Kết quả
 
 */
-var soCanTinh = 44;
-var so_hang_dv = soCanTinh / 10;
-var so_hang_chuc = soCanTinh % 10;
 
-result = so_hang_chuc + so_hang_dv ;
-console.log("result", result);
+function tinhTong(){
+    var soValue = document.getElementById("txt-nhap-so").value*1;
+    console.log("soValue",soValue);
+
+    
+    var layHangDonVi = soValue%10;
+    console.log("layHangDonVi",layHangDonVi); 
+
+    var layHangChuc = Math.floor(soValue%100/10);
+    console.log("layHangChuc",layHangChuc);
+
+    var ketQua5 = layHangChuc + layHangDonVi;
+    console.log("ketQua5",ketQua5);
+    
+    document.getElementById("ket-qua-5").innerHTML=
+    `<div>Tổng: ${ketQua5}</div>`
+}
